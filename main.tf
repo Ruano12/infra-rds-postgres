@@ -1,21 +1,21 @@
 data "aws_vpc" "postech_vpc" {
   filter {
     name   = "tag:Name"
-    values = ["postech"]
+    values = ["postech-vpc"]
   }
 }
 
 data "aws_subnet" "public_a" {
   filter {
     name   = "tag:Name"
-    values = ["public-a"]
+    values = ["postech-vpc-public-us-east-1a"]
   }
 }
 
 data "aws_subnet" "public_b" {
   filter {
     name   = "tag:Name"
-    values = ["public-b"]
+    values = ["postech-vpc-public-us-east-1b"]
   }
 }
 
